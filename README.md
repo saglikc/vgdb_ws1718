@@ -1,6 +1,7 @@
 # Vorkurs Grundlagen Datenbanken WS1718
 
-Dieser Vorkurs bringt den Studenten Datenbanken näher. Der Vorkurs unterteilt sich in fünf Abschnitte.
+Dieser Vorkurs bringt den Studenten Datenbanken näher. Der Vorkurs unterteilt sich in fünf Abschnitte mit Übungen. Das Datenbankmodell ist in SQL-Skripten hinterlegt.
+
 1. [Einführung](./01_Einfuehrung/01_EinfuehrungDB.pdf)
 2. [RDBMS](./02_RDBMS/02_RDBMS.pdf)
 3. [Client Installation](./03_Client/03_Oracle_ClientInstall.pdf)
