@@ -3,7 +3,7 @@
 Im folgenden Skript werden die Beispiel-Tabellen `VERTRETER`, `VERKAUF` und `ARTIKEL` verwendet.
 
 ## Aufgabe 1
-Führe das SQL-Skript [DB-Vertreter](./SQL_-_DB-Vertreter.sql)) in SQLPlus aus, um die Tabellen anzulegen und mit Beispieldaten zu füllen.
+Führe das SQL-Skript [DB-Vertreter](./SQL_-_DB-Vertreter.sql) in SQLPlus aus, um die Tabellen anzulegen und mit Beispieldaten zu füllen. Wie lautet dein Befehl um das SQL-Skript auszuführen?
 
 ### Lösung
 ```sql
