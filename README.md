@@ -12,6 +12,8 @@ Dieser Vorkurs bringt den Studenten Datenbanken näher. Der Vorkurs unterteilt s
   * [Wiederholung](./05_VertiefungDML/05_Wiederholung.md)
   * [Übung 1](./05_VertiefungDML/05_Uebung_DML_1.md)
   * [Übung 2](./05_VertiefungDML/05_Uebung_DML_2.md)
+  * [Übung 3](./05_VertiefungDML/05_Uebung_DML_3.md)
+  * [Übung 4](./05_VertiefungDML/05_Uebung_DML_4.md)
   * [SQL-Dump](./05_VertiefungDML/SQL_-_DB-Vertreter.sql)
 6. [Vertiefung Data Definition Language (DDL)](./06_VertiefungDDL/06_VertiefungDDL.pdf)
   * [Übung 1](./06_VertiefungDDL/06_Uebung_DDL_1.md)
