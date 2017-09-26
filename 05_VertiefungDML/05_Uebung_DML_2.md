@@ -1,9 +1,9 @@
-# Übungen
+# Übung
 
-Löse die Aufgaben durch `JOIN` der Tabellen.
+Löse folgende Aufgaben mit Hilfe von Unterabfragen.
 
 ## Aufgabe 1
-Erzeuge eine Ausgabe, in der jeder Vertreter (`VNR` und `VNAME`) mit all seinen Verkäufen (`DATUM`, `ANZAHL` und `ANR`) gelistet wird.
+Zeige alle Vertreter (`VNR`, `VNAME`) an, die bereits Artikel mit der `ANR` = `13` verkauft haben.
 
 ### Lösung
 ```sql
@@ -11,7 +11,7 @@ Deine Lösung
 ```
 
 ## Aufgabe 2
-Reduziere die Ausgabe aus Aufgabe 1 auf Vertreter und ihre Verkäufe, bei denen mehr als 10 Artikel verkauft wurden.
+Zeige alle Artikel (`ANR`, `ANAME`) an, die der Vertreter mit der `VNR` = `4321` am `27.06.2015` verkauft hat.
 
 ### Lösung
 ```sql
@@ -19,15 +19,7 @@ Deine Lösung
 ```
 
 ## Aufgabe 3
-Ergänze die Ausgabe aus Aufgabe 2 um den Namen und den Preis der jeweils verkaufen Artikel.
-Verwende dazu zwei JOIN-Befehle wie unten dargestellt.
-
-```sql
-SELECT <SPALTE/N>
-FROM <TABELLE/N>
- INNER JOIN <TABELLE_A> ON (<JOIN-Bedingung>)
- INNER JOIN <TABELLE_B> ON (JOIN-Bedingung);
-```
+Zeige alle Vertreter (`VNR`, `VNAME`) an, die bereits Artikel verkauft haben, deren Preis über `100`€ liegt.
 
 ### Lösung
 ```sql
@@ -35,9 +27,18 @@ Deine Lösung
 ```
 
 ## Aufgabe 4
-Zeige für den Verkäufer mit `VNR` = `1010` alle Verkäufe (`ANZAHL`, `DATUM`) an, die sich auf Stiefel oder Wintermäntel beziehen und am `27.06.2015` getätigt wurden.
+Zeige alle Vertreter, die noch nie den Artikel mit der `ANR` = `22` verkauft haben.
 
-### Lösungen
+### Lösung
 ```sql
 Deine Lösung
 ```
+
+## Aufgabe 5
+Welche Vertreter (`VNR`) haben am `27.06.2015` mehr Artikel mit `ANR` = `12` verkauft als der Vertreter mit `VNR` = `4321`?
+
+### Lösung
+```sql
+Deine Lösung
+```
+
