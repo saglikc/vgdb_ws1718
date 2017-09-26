@@ -1,0 +1,15 @@
+# Solutions
+**/*loesung*
+**/*Loesung*
+**/*Lösung*
+**/*lösung*
+
+# IDEA
+.idea
+**/*.iml
+
+# Binary output directories
+bin
+out
+target
+
