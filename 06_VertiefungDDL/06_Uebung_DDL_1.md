@@ -43,7 +43,7 @@ Deine Lösung
 ```
 
 ## Aufgabe 5
-Welcher Artikel (anr und aname) wurde am 27.06.15 nicht verkauft?
+Welcher Artikel (`ANR` und `ANAME`) wurde am `27.06.15` nicht verkauft?
 
 ### Lösung
 ```sql
