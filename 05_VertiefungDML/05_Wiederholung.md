@@ -50,7 +50,44 @@ WHERE Provision <1.07;
  SELECT ANAME, ANR
  FROM artikel
  WHERE APREIS >100;
+ ``
  
- ##Aufgabe 5
- ###Lösung
+ ## Aufgabe 5
+ ### Lösung
+ ```sql
+ 
+ SELECT GEBURTSDATUM, VNAME
+ FROM VERTRETER
+ WHERE to_date(GEBURTSDATUM, 'dd.mm.yyyy') < '01.01.1980' and VNAME LIKE '%i%';
+ ```
+ 
+ ## Aufgabe 6
+ ### Lösung
+ ```sql
+ INSERT INTO VERTRETER (PROVISION, VNR)
+ values (1.06, 7777);
+ ```
+ 
+ ## Aufgabe 7
+ ### Lösung
+ ```sql
+ INSERT INTO VERKAUF (UNR, VNR, ANR, ANZAHL, DATUM)
+ VALUES (1014, 7777, 13, 22, '27.09.2017');
+ ````
+ 
+ 
+ ## Aufgabe 8
+ ### Lösung
+ ```sql
+ UPDATE ARTIKEL
+ SET APREIS = 88.90 
+ WHERE ANR = 12;
+ ```
+ 
+ ##Aufgabe 9
+### Lösung
+```sql
+ 
+ 
+ 
  
