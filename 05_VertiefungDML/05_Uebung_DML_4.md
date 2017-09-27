@@ -5,7 +5,9 @@ Zeige alle Vertreter mit `NAME` und `VNR` an, deren Name länger als `6` Zeichen
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT vname, VNR
+FROM Vertreter
+WHERE LENGTH(VNAME) > 6;
 ```
 
 ## Aufgabe 2
@@ -13,7 +15,10 @@ Zeige alle Vertreter, die im Juli oder im Mai geboren sind.
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT vname, geburtsdatum
+FROM vertreter
+WHERE TO_CHAR(geburtsdatum, 'mm') = '07' 
+OR TO_CHAR(geburtsdatum, 'mm') = '06' ;
 ```
 
 ## Aufgabe 3
@@ -29,7 +34,9 @@ Erzeuge folgende Ausgabe:
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT provision, vname, vnr
+FROM vertreter
+WHERE round(1,)
 ```
 
 ## Aufgabe 4
