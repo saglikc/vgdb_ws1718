@@ -7,7 +7,7 @@ Führe das SQL-Skript [DB-Vertreter](./SQL_-_DB-Vertreter.sql) in SQLPlus aus, u
 
 ### Lösung
 ```sql
-start 
+start Pfad eingeben
 ```
 
 ## Aufgabe 2
@@ -37,7 +37,7 @@ Deine Lösung
 
 SELECT VNR, VNAME
 FROM vertreter
-WHERE Provision <1.07;
+WHERE Provision < 0.07;
 ```
 
 ## Aufgabe 4
@@ -65,7 +65,7 @@ WHERE Provision <1.07;
  ### Lösung
  ```sql
  INSERT INTO VERTRETER (PROVISION, VNR)
- values (1.06, 7777);
+ values (0.06, 7777);
  ```
  
  ## Aufgabe 7
@@ -87,7 +87,32 @@ WHERE Provision <1.07;
  ##Aufgabe 9
 ### Lösung
 ```sql
+ ALTER TABLE VERTRETER
+ ADD (bonus NUMBER(4,0);
+ ```
  
+ ## Aufgabe 10
+### Lösung
+```sql
+UPDATE VERTRETER
+SET BONUS = 500;
+```
+
+## Aufgabe 11
+###Lösung
+```sql
+ALTER TABLE VERTRETER
+MODIFY (VNAME VARCGAR2(20));
+```
+
+
+## Aufagbe 12
+### Lösung
+```sql
+SELECT DISCTINCT DATUM
+FROM VERKAUF;
+```
+`
  
  
  
