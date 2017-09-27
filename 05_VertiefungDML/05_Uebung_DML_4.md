@@ -22,9 +22,9 @@ Erzeuge folgende Ausgabe:
 
 | VNR  | VNAME_UP | PROV_GRD  |
 | ---- | -------- | --------- |
-| 1010 | MUELLER  | 1         |
-| 3401 | SCHMITZ  | 1         |
-| 5337 | RITSCH   | 1         |
+| 1010 | MUELLER  | ,1        |
+| 3401 | SCHMITZ  | ,1        |
+| 5337 | RITSCH   | ,1        |
 | 4321 | JAHRED   | 0         |
 
 ### Lösung
