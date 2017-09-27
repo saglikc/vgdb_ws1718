@@ -39,10 +39,17 @@ Wie viele Wintermäntel hat der Vertreter Jahred insgesamt verkauft?
 ```sql
 SELECT SUM(anzahl)
 FROM verkauf
-WHERE VNR = (SELECT VNR
-FROM Vertreter
-WHERE VNAME = 'Mueller')
-AND ANAME = 'Wintermantel';
+WHERE ANR = (
+	SELECT ANR
+	FROM ARTIKEL
+	WHERE ANAME = 'Wintermantel'
+)
+AND VNR =(
+	SELECT VNR 
+	FROM VERTRETER 
+	WHERE VNAME = 'Jahred')
+;
+
 ```
 
 ## Aufgabe 5
@@ -51,6 +58,10 @@ Wessen Provision liegt über der durchschnittlichen Provision aller Vertreter?
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT provision, VNAME
+FROM vertreter
+WHERE provision > (SELECT AVG(PROVISION) avgPROVISION
+FROM vertreter; 
+
 ```
 
