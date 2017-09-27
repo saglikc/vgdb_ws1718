@@ -17,7 +17,15 @@ Mache dich mit den Tabellen vertraut bzgl.:
 * Datensätzen in den Tabellen und was diese bedeuten
 
 ## Aufgabe 3
-Zeige alle Vertreter mit `NAME` und `VNR` an, die eine Provision von  weniger als 7% erhalten. Bei welchen Artikeln (`NAME` und `ARTIKELNUMMER`) liegt der Preis über `100`?
+Zeige alle Vertreter mit `NAME` und `VNR` an, die eine Provision von  weniger als 7% erhalten. 
+
+### Lösung
+```sql
+Deine Lösung
+```
+
+## Aufgabe 4
+Bei welchen Artikeln (`NAME` und `ARTIKELNUMMER`) liegt der Preis über `100`?
 
 ### Lösung
 ```sql
