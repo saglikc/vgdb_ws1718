@@ -25,8 +25,11 @@ Lege für die Tabelle `VERKAUF` alle notwendigen Foreign Key Constraints (`FK`) 
 
 ### Lösung
 ```sql
-CREATE TABLE verkauf
-(VNR number(4,0) CONSTRAINT FKPER REFERENCES VERTRETER(vnr)
+ALTER TABLE VERKAUF
+ADD CONSTRAINT FKVERK_ART Foreign KEY(ANR) REFERNCES ARTIKEL;
+
+ALTER TABLE VERKAUF
+ADD CONSTRAINT FKVERK_VERK Foreign KEY(VNR) REFERNCES VERTRETER;
 ```
 
 ## Aufgabe 3
@@ -34,7 +37,8 @@ Lösche den Foreign Key Constraint `FK_DEPTNO`. Dieser ist für die Spalte `DEPT
 
 ### Lösung
 ```sql
-Deine Lösung
+ALTER TABLE DEPTNO
+DROP CONSTRAINT FK_DEPTNO
 ```
 
 ## Aufgabe 4
@@ -42,6 +46,6 @@ Lege den benötigten Foreign Key Constraint (`FK`) für die Tabelle `EMP` neu an
 
 ### Lösung
 ```sql
-Deine Lösung
+CREATE TABLE 
 ```
 
