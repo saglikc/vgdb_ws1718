@@ -14,7 +14,7 @@ DROP TABLE Verkauf cascade constraints;
 PROMPT Tabelle Verterter anlegen...
 Create Table Vertreter
 (
-	VNr NUMBER(4,0) Constraint PKVertreter Primary Key,
+	VNr NUMBER(4,0),
 	VName varchar2(15), 
 	Geburtsdatum date, 
 	Provision NUMBER(3,2)
@@ -23,7 +23,7 @@ Create Table Vertreter
 PROMPT Tabelle Artikel anlegen...
 Create Table Artikel
 (
-	ANr NUMBER(4,0) Constraint PKArtikel Primary Key,
+	ANr NUMBER(4,0),
 	AName varchar2(15), 
 	APreis NUMBER(8,2)
 );
@@ -31,9 +31,9 @@ Create Table Artikel
 PROMPT Tabelle Verkauf anlegen...
 Create Table Verkauf
 (
-	UNr NUMBER(4,0) Constraint PKVerkauf Primary Key,
-	VNr NUMBER (4,0) Constraint fkVerkaufVertreter References Vertreter(VNr),
-	ANr NUMBER(4,0) Constraint fkVerkaufArtikel References Artikel(ANr),
+	UNr NUMBER(4,0),
+	VNr NUMBER (4,0),
+	ANr NUMBER(4,0),
 	Anzahl NUMBER(4,0) Not Null,
 	Datum date Not Null
 );
