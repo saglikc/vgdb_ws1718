@@ -17,8 +17,8 @@ Zeige alle Vertreter, die im Juli oder im Mai geboren sind.
 ```sql
 SELECT vname, geburtsdatum
 FROM vertreter
-WHERE TO_CHAR(geburtsdatum, 'mm') = '07' 
-OR TO_CHAR(geburtsdatum, 'mm') = '06' ;
+WHERE TO_CHAR(geburtsdatum, 'mm') = '06' 
+OR TO_CHAR(geburtsdatum, 'mm') = '05' ;
 ```
 
 ## Aufgabe 3
@@ -44,7 +44,9 @@ Zeige alle Artikel an, die mit `Wi` beginnen. Löse diese Aufgabe mit der substr
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT ANAME
+FROM artikel
+WHERE SUBSTR(ANAME,1,2) = 'Wi';
 ```
 
 ## Aufgabe 5
@@ -59,7 +61,8 @@ Erzeuge folgende Ausgabe:
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT VNR, VNAME, geburtsdatum
+from vertreter;
 ```
 
 ## Aufgabe 6
@@ -67,7 +70,12 @@ Zeige alle Vertreter (`VNR`, `VNAME`) an, die im selben Jahr geboren sind wie de
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT VNR,VNAME
+FROM vertreter
+WHERE TO_CHAR(geburtsdatum,'yyyy') = (
+SELECT TO_CHAR(geburtsdatum,'yyyy') 
+FROM VERTRETER 
+WHERE VNAME LIKE 'Jahred');  
 ```
 
 ## Aufgabe 7
@@ -75,5 +83,14 @@ Erhöhe bei den Vertretern den Bonus um `300`, die in einem Monat geboren sind, 
 
 ### Lösung
 ```sql
-Deine Lösung
+UPDATE vertreter
+set bonus = bonus + 300
+WHERE vnr IN (
+	SELECT vnr
+	FROM vertreter
+	WHERE TO_CHAR(Geburtsdatum, 'mm') IN (
+		SELECT TO_CHAR(LAST_DAY(Geburtsdatum), 'mm')
+		FROM vertreter
+		WHERE TO_CHAR(LAST_DAY(Geburtsdatum), 'dd') = '31'
+));
 ```
