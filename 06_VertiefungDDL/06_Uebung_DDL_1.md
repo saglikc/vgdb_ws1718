@@ -15,7 +15,12 @@ Erzeuge eine View, die folgendes Ergebnis repräsentiert, das nur Verkäufe vom 
 
 ### Lösung
 ```sql
-Deine Lösung
+CREATE OR REPLACE VIEW v_vt_vk_a AS
+SELECT vt.VNR, VNAME, UNR, ANZAHL, vk.ANR, ANAME, APREIS
+FROM vertreter vt
+INNER JOIN verkauf vk ON (vt.vnr = vk.vnr)
+INNER JOIN artikel a ON (vk.anr = a.anr)
+WHERE TO_CHAR (datum, 'dd.mm.yyyy') = '27.06.2015';
 ```
 
 ## Aufgabe 2
@@ -23,7 +28,18 @@ Wie viele **Verkäufe** hat der Vertreter Mueller am `27.06.15` durchgeführt?
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT COUNT (VNR)
+FROM verkauf
+WHERE DATUM IN (
+SELECT DATUM 
+FROM VERKAUF
+ WHERE TO_CHAR(datum, 'dd.mm.yyyy') = '27.06.2015')
+AND VNR = (
+SELECT VNR
+ FROM VERTRETER
+ WHERE VNAME = 'Mueller');
+
+
 ```
 
 ## Aufgabe 3
@@ -31,7 +47,16 @@ Wie viele **Artikel** hat der Vertreter Mueller am `27.06.15 verkauft?
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT COUNT (ANR)
+FROM verkauf
+WHERE DATUM IN (
+SELECT DATUM 
+FROM artikel
+ WHERE TO_CHAR(datum, 'dd.mm.yyyy') = '27.06.2015')
+AND anr = (
+SELECT anr
+ FROM VERTRETER
+ WHERE VNAME = 'Mueller');
 ```
 
 ## Aufgabe 4
@@ -39,7 +64,13 @@ Wie viele Artikel wurden durchschnittlich am `27.06.15` verkauft?
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT COUNT (ANR)
+FROM verkauf
+WHERE DATUM IN (
+SELECT DATUM 
+FROM artikel
+ WHERE TO_CHAR(datum, 'dd.mm.yyyy') = '27.06.2015');
+
 ```
 
 ## Aufgabe 5
@@ -47,5 +78,9 @@ Welcher Artikel (`ANR` und `ANAME`) wurde am `27.06.15` nicht verkauft?
 
 ### Lösung
 ```sql
-Deine Lösung
+SELECT ANR, ANAME
+FROM Artikel
+WHERE ANR NOT IN (
+SELECT DISTINCT ANR
+ FROM v_vt_vk_a);
 ```
