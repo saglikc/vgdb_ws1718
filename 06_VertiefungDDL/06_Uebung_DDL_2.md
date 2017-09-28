@@ -38,7 +38,7 @@ Lösche den Foreign Key Constraint `FK_DEPTNO`. Dieser ist für die Spalte `DEPT
 ### Lösung
 ```sql
 ALTER TABLE DEPTNO
-DROP CONSTRAINT FK_DEPTNO
+DROP CONSTRAINT FK_DEPTNO;
 ```
 
 ## Aufgabe 4
@@ -46,6 +46,7 @@ Lege den benötigten Foreign Key Constraint (`FK`) für die Tabelle `EMP` neu an
 
 ### Lösung
 ```sql
-CREATE TABLE 
+ALTER TABLE EMP
+ADD CONSTRAINT FK_DEPTNO FOREIGN KEY(DEPTNO) REFERNCES DEPT;
 ```
 
